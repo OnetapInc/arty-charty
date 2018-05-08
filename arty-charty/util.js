@@ -428,7 +428,7 @@ function makeBarsChartPath(chart, width, t, maxValue, chartHeight, chartHeightOf
         barCords.push(candle.barCords);
     });
     return {
-      paths: paths,
+      paths: paths.filter(path => path !== true),
       width: fullWidth,
       maxScroll: fullWidth - width,
       barCords: barCords
